@@ -1,6 +1,8 @@
 package net.comments.sample;
 
 /**
+ * The main class to run the application (code).
+ *
  * @author Dmytro Serdiuk (dmytro.serdiuk@gmail.com)
  * @version $Id$
  * @since ?????
