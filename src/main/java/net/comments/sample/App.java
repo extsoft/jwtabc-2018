@@ -13,6 +13,11 @@ public class App {
         Student andrey = new AttentiveStudent("Andrey");
         Student nastya = new AttentiveStudent("Nastya");
         Student dima = new BadStudent("Dima");
+        Room c123 = new TrainingRoom("c123");
+        c123.accept(andrey);
+        c123.accept(dima);
+        c123.accept(nastya);
+        c123.accept(volodya);
         introduce(andrey, volodya, nastya, dima);
         startLesson(volodya, andrey, nastya, dima);
     }
@@ -25,7 +30,7 @@ public class App {
     }
 
     private static void printName(Person person) {
-        System.out.println(String.format("There is %s in the room!", person.name()));
+        System.out.println(String.format("Hello there! My name is %s.", person.name()));
     }
 
     private static void startLesson(Teacher teacher, Student s1, Student s2, Student s3) {
