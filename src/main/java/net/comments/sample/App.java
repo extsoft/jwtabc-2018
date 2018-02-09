@@ -22,21 +22,17 @@ public class App {
         startLesson(volodya, andrey, nastya, dima);
     }
 
-    private static void introduce(Person p1, Person p2, Person p3, Person p4) {
-        printName(p1);
-        printName(p2);
-        printName(p3);
-        printName(p4);
+    private static void introduce(Person... persons) {
+        for (Person person : persons) {
+            System.out.println(String.format("Hello there! My name is %s.", person.name()));
+        }
     }
 
-    private static void printName(Person person) {
-        System.out.println(String.format("Hello there! My name is %s.", person.name()));
-    }
 
-    private static void startLesson(Teacher teacher, Student s1, Student s2, Student s3) {
+    private static void startLesson(Teacher teacher, Student... students) {
         teacher.teach();
-        s1.learn();
-        s2.learn();
-        s3.learn();
+        for (Student student : students) {
+            student.learn();
+        }
     }
 }
