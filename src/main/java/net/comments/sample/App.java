@@ -28,7 +28,6 @@ public class App {
         }
     }
 
-
     private static void startLesson(Teacher teacher, Student... students) {
         teacher.teach();
         for (Student student : students) {
