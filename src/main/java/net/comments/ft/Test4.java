@@ -12,10 +12,15 @@ import org.testng.annotations.Test;
  * @since ?????
  */
 public class Test4 extends BaseDriver {
+    private final CommentPage commentPage;
+
+    public Test4() {
+        super();
+        this.commentPage = new BCommentPage(this.driver);
+    }
 
     @Test
     public void test() {
-        CommentPage commentPage = new BCommentPage(this.driver);
         commentPage.open();
         this.driver.findElements(By.name("SelectedId")).get(0).click();
         this.driver.findElement(By.xpath("//*[@value=\"Delete\"]")).click();
