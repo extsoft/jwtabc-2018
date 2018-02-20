@@ -7,10 +7,15 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class Test1 extends BaseDriver {
+    private final CommentPage commentPage;
+
+    public Test1() {
+        super();
+        this.commentPage = new BCommentPage(this.driver);
+    }
 
     @Test
     public void test() {
-        CommentPage commentPage = new BCommentPage(this.driver);
         commentPage.open();
         commentPage.newComment();
         this.driver.findElement(By.xpath("//*[@id=\"Text\"]")).clear();
