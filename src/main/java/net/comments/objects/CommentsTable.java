@@ -6,4 +6,8 @@ package net.comments.objects;
  * @since ?????
  */
 public interface CommentsTable {
+
+    boolean hasCommentWithId(int id);
+
+    boolean hasCommentWithName(String name);
 }

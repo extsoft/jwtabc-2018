@@ -28,7 +28,7 @@ public class BCommentPage implements CommentPage {
     }
 
     public CommentsTable currentComments() {
-        return new BCommentsTable();
+        return new BCommentsTable(driver);
     }
 
     public CommentsTable commentsFrom(int page) {
